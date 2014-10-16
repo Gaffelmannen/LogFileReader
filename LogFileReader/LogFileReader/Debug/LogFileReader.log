@@ -1,0 +1,25 @@
+﻿Build started 2014-10-16 15:32:03.
+     1>Project "c:\Users\A501780\documents\visual studio 2010\Projects\LogFileReader\LogFileReader\LogFileReader.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\LogFileReader.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\a501780\documents\visual studio 2010\projects\logfilereader\logfilereader\main.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\LogFileReader.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.lib" /MACHINE:X86 Debug\apache_logfile_analyzer.obj
+         Debug\apache_logfile_interpreter.obj
+         Debug\filemanager.obj
+         Debug\main.obj
+         LINK : c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.exe not found or not built by the last incremental link; performing full link
+         LogFileReader.vcxproj -> c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\a501780\documents\visual studio 2010\Projects\LogFileReader\Debug\LogFileReader.exe;#1" /manifest Debug\LogFileReader.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\LogFileReader.unsuccessfulbuild".
+         Touching "Debug\LogFileReader.lastbuildstate".
+     1>Done Building Project "c:\Users\A501780\documents\visual studio 2010\Projects\LogFileReader\LogFileReader\LogFileReader.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.69
