@@ -61,16 +61,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="apache_access_logitem.h" />
+    <ClInclude Include="apache_access_relative_occurence.h" />
     <ClInclude Include="apache_logfile_analyzer.h" />
     <ClInclude Include="apache_logfile_interpreter.h" />
     <ClInclude Include="filemanager.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="network_server.h" />
+    <ClInclude Include="network_client.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="apache_logfile_analyzer.cpp" />
     <ClCompile Include="apache_logfile_interpreter.cpp" />
     <ClCompile Include="filemanager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="network_server.cpp" />
+    <ClCompile Include="network_client.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

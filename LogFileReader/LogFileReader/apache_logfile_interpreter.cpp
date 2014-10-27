@@ -6,7 +6,14 @@ apache_access_logitem apache_logfile_interpreter::interpret_row(string row)
 	
 	item.ip = apache_logfile_interpreter::find_in_row(&row, "- -");
 	item.date = apache_logfile_interpreter::find_in_row(&row, "[", "]");
-	item.request = apache_logfile_interpreter::find_in_row(&row, "\"", "\"");
+	
+	std::string tmp = apache_logfile_interpreter::find_in_row(&row, "\"", "\"");
+	std::vector<std::string> parts = apache_logfile_interpreter::split_in_row_in_two(&tmp, "/");
+	if(parts.size() > 1)
+	{
+		item.url = parts[0];
+		item.request = parts[1];
+	}
 
 	return item;
 }
@@ -24,7 +31,7 @@ string apache_logfile_interpreter::find_in_row(string* data, string delimter)
 
 	if (pos != std::string::npos)
 	{
-		str = item.substr(0, pos - delimter.length());
+		str = item.substr(0, pos - 1);
 		item = item.erase(0, pos);
 	}
 
@@ -46,4 +53,19 @@ string apache_logfile_interpreter::find_in_row(string* data, string delimter_one
 	}
 
 	return str;
+}
+
+std::vector<std::string> apache_logfile_interpreter::split_in_row_in_two(string* data, string delimter)
+{
+	std::string item = (*data);
+	std::size_t pos = item.find(delimter);
+	std::vector<std::string> parts;
+
+	if (pos != std::string::npos)
+	{
+		parts.push_back(item.substr(0, pos - 1));
+		parts.push_back(item.substr(pos, item.size() - pos - 1));
+	}
+
+	return parts;
 }
